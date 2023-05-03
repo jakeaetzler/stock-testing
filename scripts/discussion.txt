@@ -1,0 +1,16 @@
+CSCI349 Discussion:
+
+Our project presented an interesting set of problems for us to solve. Probably the easiest task for us was sourcing our
+data. We found the yfinance python package which makes downloading decades of financial data doable in just a few
+line of code. The data provided by yfinance is almost always very neat and not requiring too much additional preprocessing.
+
+During the modeling phase of our project, we tested and evaluated several different models. Originally, we were using the
+Prophet model provided by Facebook to try and predict adjusted closing prices of stocks. We also used the ARIMA model to try and do
+this, however results were consistently better using Prophet. Eventually, we decided to pivot our goal to simply determining
+if a stock will move up or down the following day. If this model is to be used with a trading application, it is far more
+valuable for us to have a binary buy or sell output based on whether stock is predicted to go up or down.
+
+With this, we then decided to move to a RandomForestClassifier model. The hyperparameters we're using are n_estimators = 200,
+min_samples_split = 50, random_state = 1. We set n_estimators to 200 to capture roughly a year of trading (no weekends). We set
+min_samples_split to 50 to ensure that we have around 3 months of data per sample, and random_state to 1 in order to randomize
+the classifier.
