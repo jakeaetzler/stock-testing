@@ -1,0 +1,13 @@
+CSCI349 Conclusions:
+
+As can be seen in the reported precisions above, our Random Forest Classifier is able to successfully decide if a stock
+will increase or decrease over 50% of the time for $PNM, $GALT, and $AMZN. Surprisingly, we achieved our highest precision
+score with $AMZN at around 0.54. In our performance results we found the reason for the error in predictability is because
+of the number of false positives, which is relatively high, for each of the stock tickers that we modeled.
+
+With the current performance metrics our model is producing, we cannot recommend purely buying and selling stock based
+off the model's predictions. What we can safely say is that our model has proven itself to be a valid tool in evaluating
+likely potential movement of the stock. One very good use for our model would be if it were used in a suite of metrics
+for determining stock movement. Our previous work with the Prophet model has proven that it also has validity in
+determining stock movement, and potentially utilizing these 2 models together could lead to higher precision scores for
+our predictions.
