@@ -93,7 +93,7 @@ def run():
 
     # d_list = multi_threaded_stock_rmse(ticker_list)
 
-    fd = open('all_out_2.csv', 'w')
+    fd = open('../data/all_out_2.csv', 'w')
     writer = csv.writer(fd)
 
     writer.writerow(['ticker', 'yhat', 'yhat_lower', 'yhat_upper', 'trend', 'rmse', 'mape'])
@@ -105,7 +105,7 @@ def run():
 
     # getting lowest rmse
 
-    df = pd.read_csv('all_out_2.csv')
+    df = pd.read_csv('../data/all_out_2.csv')
     df.sort_values(by='rmse', inplace=True)
 
     low_ticks = []
